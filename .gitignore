@@ -1,0 +1,2 @@
+*.asv # For auto save files
+*.mat # For exported matlab data
