@@ -1,17 +1,38 @@
-% Creacion de una funcion
-% En f se guarda el valor retornado
-function f = suma(a, b)
-    f = a + b;
+% Programa para comprobar en que termino
+% La suma de los primeros n numeros naturales es menor que una cota
+
+function Practica1()
+    serie(44)
+    suma(44)
+    serie(45)
+    suma(45)
+    [min_f, max_f] = cota(1000);
+    min_f
+    max_f
 end
 
-% Funcion que calcula la suma de los n primeros elementos
-function result = serie(n)
-    sum = 0;
+function term = serie(n)
+    s = 0;
 
     for i = 1:n
-        sum = sum + i
-        pause % Pide un input de teclado para continuar
+        s = s + i;
+    end
+    term = s;
+end
+
+function s = suma(n)
+    s = n* (n + 1) /2
+end
+
+function [min_term, max_term] = cota(n)
+    contador = 0;
+    s = 0;
+
+    while s < n 
+        contador = contador + 1;
+        s = s + contador;
     end
 
-    result = sum;
+    min_term = contador - 1;
+    max_term = contador;
 end
