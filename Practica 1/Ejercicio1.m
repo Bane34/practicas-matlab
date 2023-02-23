@@ -18,3 +18,6 @@ resultados(:,2) = r;
 for i = 1:6
     subplot(2, 3, i), plot(nodos, resultados, 'r--'); % `r--` -> pintar discontinuo y en rojo
 end
+
+% Ahora definimos Funcion1 como un handle
+f = @Funcion1;
